@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Product } from '../../types';
 import { Badge } from '../ui/Badge';
 import { ProductImage } from '../ui/ProductImage';
@@ -10,27 +10,44 @@ interface ProductDetailsProps {
 }
 
 export function ProductDetails({ product }: ProductDetailsProps) {
+  const [activeImage, setActiveImage] = useState(
+    `/images/products/${product.images[0] || product.thumbnail}`
+  );
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {/* Left: Images — no animate-on-scroll on image containers; opacity:0 would hide them */}
+      {/* Left: Images */}
       <div className="space-y-4">
-        <div className="product-detail-bg rounded-lg overflow-hidden h-96">
+        {/* Main image box */}
+        <div className="rounded-lg overflow-hidden h-96">
           <ProductImage
-            src={`/images/products/${product.images[0] || product.thumbnail}`}
+            src={activeImage}
             alt={product.modelName}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
+
+        {/* Thumbnail strip */}
         <div className="grid grid-cols-4 gap-2">
-          {product.images.map((image) => (
-            <div key={image} className="product-detail-bg rounded-lg overflow-hidden h-20">
-              <ProductImage
-                src={`/images/products/${image}`}
-                alt={`${product.modelName} ${image}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
+          {product.images.map((image) => {
+            const url = `/images/products/${image}`;
+            const isActive = activeImage === url;
+            return (
+              <button
+                key={image}
+                onClick={() => setActiveImage(url)}
+                className={`product-detail-bg rounded-lg overflow-hidden h-20 border-2 transition-all ${
+                  isActive ? 'border-amber-500' : 'border-transparent hover:border-stone-500'
+                }`}
+              >
+                <ProductImage
+                  src={url}
+                  alt={`${product.modelName} ${image}`}
+                  className="w-full h-full object-contain"
+                />
+              </button>
+            );
+          })}
         </div>
       </div>
 

@@ -29,15 +29,22 @@ export function Footer({ dark = false }: FooterProps) {
           <div className="animate-on-scroll">
             <h4 className={`${heading} font-bold mb-4`}>Support</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition">FAQ</a></li>
               <li><a href="#" className="hover:text-white transition">Contact</a></li>
-              <li><a href="#" className="hover:text-white transition">Shipping</a></li>
             </ul>
           </div>
           <div className="animate-on-scroll">
             <h4 className={`${heading} font-bold mb-4`}>Contact</h4>
-            <p className="text-sm">Email: info@plastopol.com</p>
-            <p className="text-sm">Phone: +91 XXXX XXXXX</p>
+            <p className="text-sm">Email: {" "}
+              <a href="mailto:plastopoly@gmail.com" className="hover:text-[#635cdf]">
+                 plastopoly@gmail.com 
+              </a>
+            </p>
+            <p className="text-sm">
+              Phone:{" "}
+              <a href="tel:+91 8075767580" className="hover:text-[#635cdf]">
+                +91 8075767580
+              </a>
+            </p>
           </div>
         </div>
         <div className={`border-t ${divider} mt-8 pt-8 animate-on-scroll`}>

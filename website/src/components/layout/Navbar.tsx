@@ -1,16 +1,16 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 interface NavbarProps {
-  /** dark: used on the amber/brown products listing page */
   dark?: boolean;
-  /** mid: used on the homepage slate theme */
   mid?: boolean;
 }
 
 export function Navbar({ dark = false, mid = false }: NavbarProps) {
+  const [logoFailed, setLogoFailed] = useState(false);
+
   const bg =
     dark ? 'bg-stone-900 border-b border-stone-800'
     : mid ? 'bg-slate-900 border-b border-slate-700'
@@ -35,8 +35,18 @@ export function Navbar({ dark = false, mid = false }: NavbarProps) {
     <nav className={`${bg} sticky top-0 z-50`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
-          <Link href="/" className="flex items-center">
-            <span className={`text-2xl font-bold ${logo}`}>Plastopol</span>
+          <Link href="/" className="flex items-center gap-2">
+            {!logoFailed && (
+              <img
+                src="/images/logo.png"
+                alt="Plastopol logo"
+                className="h-8 w-auto"
+                onError={() => setLogoFailed(true)}
+              />
+            )}
+            <span className={`text-2xl font-bold hidden sm:block ${logo}`}>
+              Plastopol
+            </span>
           </Link>
           <div className="flex items-center space-x-8">
             <Link href="/" className={link}>Home</Link>

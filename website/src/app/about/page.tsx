@@ -104,7 +104,14 @@ export default function AboutPage() {
               <p className="text-slate-400">
                 Interested in bulk orders, custom colours, or have a question? We would love to hear from you.
               </p>
-              <p className="font-medium text-indigo-400">info@plastopol.com</p>
+              <p className="font-medium text-indigo-400">
+                <a href="mailto:plastopoly.enquire@gmail.com" className="hover:text-indigo-300 transition">
+                  plastopoly@gmail.com
+                </a><br />
+                <a href="tel:+91 8075767580" className="hover:text-indigo-300 transition">
+                  +91 8075767580
+                </a>
+              </p>
             </div>
           </Container>
         </section>

@@ -1,3 +1,4 @@
+import React from 'react';
 import { notFound } from 'next/navigation';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -19,11 +20,12 @@ export function generateStaticParams() {
 }
 
 interface Props {
-  readonly params: { slug: string };
+  readonly params: Promise<{ slug: string }>;
 }
 
-export default function ProductPage({ params }: Props) {
-  const product = getProductBySlug(params.slug);
+export default async function ProductPage({ params }: Props) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
 
   if (!product) notFound();
 

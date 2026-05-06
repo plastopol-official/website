@@ -3,13 +3,10 @@
     "private": true,
     "scripts": {
         "web": "cd website && npm run dev",
-        "buildweb": "cd website && next build && npx @opennextjs/cloudflare build",
+        "buildweb": "cd website && npm run build && npm run deploy",
         "app": "cd \"Plastopol CMS\" && npm run tauri dev"
     },
     "dependencies": {
         "@tauri-apps/api": "^2.10.1"
-    },
-    "devDependencies": {
-        "next": "^15.5.15"
     }
 }

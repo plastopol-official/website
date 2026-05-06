@@ -2,3 +2,5 @@ PAT.txt
 node_modules/
 .next/
 .vscode/
+.open-next/
+.wrangler/

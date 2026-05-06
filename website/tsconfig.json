@@ -22,7 +22,9 @@
     "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
     "allowJs": true,
     "incremental": true,
@@ -38,6 +40,7 @@
     "content",
     ".next/types/**/*.ts",
     "**/*.d.ts",
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"

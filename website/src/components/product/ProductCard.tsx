@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
 import { Product } from '../../types';
 import { Badge } from '../ui/Badge';
 import { ProductImage } from '../ui/ProductImage';

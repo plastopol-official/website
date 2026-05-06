@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Product } from '../../types';
 import { Badge } from '../ui/Badge';
 import { ProductImage } from '../ui/ProductImage';

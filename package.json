@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "web": "cd website && npm run dev",
-        "buildweb": "cd website && npm run build && npm run deploy",
+        "buildweb": "cd website && npm run build",
         "app": "cd \"Plastopol CMS\" && npm run dev"
     }
 }

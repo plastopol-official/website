@@ -4,11 +4,12 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "tauri": "tauri"
-  },
+  "dev": "tauri dev",
+  "frontend": "vite",
+  "build": "tauri build",
+  "frontend:build": "tsc && vite build",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@tauri-apps/api": "^2.10.1",
     "@tauri-apps/plugin-dialog": "^2",

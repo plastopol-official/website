@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Product } from '../../types';
 import { Badge } from '../ui/Badge';
 import { ProductImage } from '../ui/ProductImage';
+import Link from 'next/link';
 
 interface ProductDetailsProps {
   readonly product: Product;
@@ -84,7 +85,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         )}
 
         <div className="animate-on-scroll">
-          <button className="product-enquiry-btn">Make an Enquiry</button>
+          <Link href="/about" className="product-enquiry-btn">Make an Enquiry</Link>
         </div>
 
         {product.features.length > 0 && (

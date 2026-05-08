@@ -1,5 +1,43 @@
 [
   {
+    "id": "massino",
+    "slug": "massino",
+    "modelName": "Massino",
+    "status": "active",
+    "colors": [
+      "brown",
+      "rosewood",
+      "teakwood",
+      "red",
+      "black",
+      "coffee black",
+      "white",
+      "marble beige"
+    ],
+    "description": "Ergonomic office chair designed for long working hours with lumbar support and breathable mesh.",
+    "features": [
+      "Smooth Rounded",
+      "Professional Look",
+      "Effective lumbar support"
+    ],
+    "specifications": [
+      {
+        "key": "Material",
+        "value": "High Quality Plastic"
+      }
+    ],
+    "category": "lounge",
+    "tags": [
+      "Top Seller in Category"
+    ],
+    "images": [
+      "massino-01.jpeg",
+      "massino-02.jpeg"
+    ],
+    "thumbnail": "massino-01.jpeg",
+    "inStock": true,
+    "leadTime": "4 days"
+  },{
     "id": "stl-01",
     "slug": "stool-01",
     "modelName": "Stool 01",
@@ -250,6 +288,48 @@
       "arml-7002-01.jpeg"
     ],
     "thumbnail": "arml-7002-01.jpeg",
+    "inStock": true,
+    "leadTime": "3-5 days"
+  },
+  {
+    "id": "arml-7003",
+    "slug": "armless-chair-7003",
+    "modelName": "Armless 7003",
+    "status": "active",
+    "colors": [
+      "brown",
+      "red",
+      "blue",
+      "teakwood",
+      "rosewood",
+      "pista green",
+      "mexican green",
+      "white",
+      "black",
+      "leaf green",
+      "orange",
+      "lemon yellow"
+    ],
+    "description": "Ergonomic office chair designed for long working hours with lumbar support and aesthetic webbed mesh.",
+    "features": [
+      "Lightweight",
+      "Classy Look"
+    ],
+    "specifications": [
+      {
+        "key": "Material",
+        "value": "High Quality Plastic"
+      }
+    ],
+    "category": "office",
+    "tags": [
+      "ergonomic",
+      "bestseller"
+    ],
+    "images": [
+      "arml-7003-01.jpeg"
+    ],
+    "thumbnail": "arml-7003-01.jpeg",
     "inStock": true,
     "leadTime": "3-5 days"
   }
